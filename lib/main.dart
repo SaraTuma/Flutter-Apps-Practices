@@ -21,10 +21,14 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
                 primarySwatch: Colors.red,
                 brightness: AppController.instance.isDarkTheme
-                    ? Brightness.light
-                    : Brightness.dark),
+                    ? Brightness.dark
+                    : Brightness.light),
             //home: const MyHomePage(title: 'Flutter Sara TESTEEEEEEE'),
-            home: const LoginPage(),
+            initialRoute: '/',
+            routes: {
+              '/': (context) => LoginPage(),
+              '/home': (context) => MyHomePage(title: "Teste")
+            },
           );
         });
   }

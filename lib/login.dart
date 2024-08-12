@@ -24,6 +24,14 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Container(
+                  width: 100,
+                  height: 100,
+                  child: Image.asset('assets/images/logo.png'),
+                ),
+                Container(
+                  height: 10,
+                ),
                 TextField(
                   onChanged: (value) {
                     email = value;
@@ -47,15 +55,13 @@ class _LoginPageState extends State<LoginPage> {
                   height: 15,
                 ),
                 TextButton(
+                  
                     onPressed: () {
                       if (email == 'teste@gmail.com' && senha == '123') {
-                        print("Correcto!!");
-                        Navigator.of(context)
-                            .pushReplacement(MaterialPageRoute(builder: (context) =>
-                          MyHomePage(title: "Teste")
-                        ));
+                        print("Login Correcto!!");
+                        Navigator.of(context).pushReplacementNamed('/home');
                       } else {
-                        print("Incorrecto!");
+                        print("Login Incorrecto!");
                       }
                     },
                     child: const Text(
@@ -63,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
                       style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white),
+                          color: Colors.black),
                     )),
               ],
             ),
