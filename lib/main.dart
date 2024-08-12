@@ -1,7 +1,7 @@
-import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:roll_rice_app/app_controller.dart';
 import 'package:roll_rice_app/home_page.dart';
+import 'package:roll_rice_app/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +23,8 @@ class MyApp extends StatelessWidget {
                 brightness: AppController.instance.isDarkTheme
                     ? Brightness.light
                     : Brightness.dark),
-            home: const MyHomePage(title: 'Flutter Sara TESTEEEEEEE'),
+            //home: const MyHomePage(title: 'Flutter Sara TESTEEEEEEE'),
+            home: const LoginPage(),
           );
         });
   }

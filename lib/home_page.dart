@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:roll_rice_app/components/switch.dart';
 
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
@@ -31,6 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            
             const Text(
               'Voce clicou aqui varias vezes:',
             ),
