@@ -19,4 +19,4 @@ samples, guidance on mobile development, and a full API reference.
 
 ### Login
 
-![Tela Login](./prints_screens/images/login-simples.png)
+![Tela Login](./prints_screens/login-simples.png)
