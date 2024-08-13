@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:roll_rice_app/components/switch.dart';
 
-
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
@@ -28,11 +27,36 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
         actions: const [SwitchAppTheme()],
       ),
+      drawer: Drawer(
+        child: Column(
+          children: [
+            UserAccountsDrawerHeader(
+                currentAccountPicture: ClipRRect(
+                    borderRadius: BorderRadius.circular(40),
+                    child: Image.network('https://github.com/SaraTuma.png')),
+                accountName: Text('Sara Tuma'),
+                accountEmail: Text('sara@gmail.com')),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text("Início"),
+              subtitle: Text('Tela de início'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: Icon(Icons.logout),
+              title: Text("Sair"),
+              subtitle: Text('Terminar sessão'),
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed('/login');
+              },
+            )
+          ],
+        ),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            
             const Text(
               'Voce clicou aqui varias vezes:',
             ),
